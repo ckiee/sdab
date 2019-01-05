@@ -1,0 +1,17 @@
+{
+  "name": "sdab",
+  "version": "1.0.0",
+  "description": "Selfhosted Docker Automated Builds",
+  "main": "app.js",
+  "author": "RONTheCookie <ronthecookie0101@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-github-webhook": "^1.0.6",
+    "git-url-parse": "^11.1.2",
+    "mz": "^2.7.0"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
