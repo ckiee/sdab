@@ -8,6 +8,7 @@ const fs = require("mz/fs");
 const GitUrlParse = require("git-url-parse");
 const os = require("os");
 const chdproc = require("mz/child_process");
+// Create repos folder and catch "already exists" error incase it is thrown.
 fs.mkdir("repos")
     .catch(error => {
         if (error.message.includes("EEXIST")) return;
