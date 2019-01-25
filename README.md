@@ -1,8 +1,8 @@
 # sdab - Selfhosted Docker Automated Builds
-![Not Production Ready](https://img.shields.io/badge/Production%20Ready%3F-No-red.svg)
+![Not Production Ready](https://img.shields.io/badge/Production%20Ready%3F-No-red.svg) sdab has not been very widely tested yet but it seems to work fine for my purposes
 <br>
-*sdab* is a system to automatically build Dockerfiles that are in Github repos.
-## Getting Started (est. 5-10min)
+*sdab* is a Node.js app to automatically build Dockerfiles that are in Github repos.
+## Getting Started
 You need to be connected to the Docker Hub and have Docker installed on your computer. <br><br>
 Now, run the following in a Terminal: 
 ```
@@ -45,7 +45,8 @@ Now that your sdab instance is running, you have to go into your Github Repo's s
 * Enter a random string that will be your new Github Webhook secret, behave like it is your password.<br>
 ![Example](https://i.ronthecookie.me/ecvPjtu.png)
 * Select "*Just the `push` event*" and add the Webhook - if you see a nice ✔️ emoji then success!
-## "docker run" command argument customization guide
+
+## "docker run" command argument customization guide (badly written)
 If this is a private git repo - you will need to point it to an ssh key pair with the `-v /path/to/ssh/keypair/folder:/root/.ssh`
 Now, you'll need a port to expose `-p 6000:3000` where 6000 is your port.
 Those are all of the important arguments done, now you just need to run `docker login` (or `docker login registry.example.com` if you are connecting to a registry other than Docker Hub)
