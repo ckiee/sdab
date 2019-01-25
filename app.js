@@ -45,7 +45,7 @@ webhookHandler.on("push", async (___USELESS___, data) => {
     await chdproc.exec(`docker build -t ${tagArg} repos/${repoUniqueHuman}`);
     console.log(`${data.repository.full_name} event: built docker image ${cfg.tag}`);
     try {
-        await chdproc.exec("docker login "+cfg.customRegistry);
+        await chdproc.exec("docker login "+cfg.customRegistry || "");
     } catch (derr) {
         if (derr.message.includes("Cannot perform an interactive login")) {
             console.log(`${data.repository.full_name} ERROR: You have to login on the host first before starting a build.`);
