@@ -1,5 +1,5 @@
 # sdab - Selfhosted Docker Automated Builds
-![Not Production Ready](https://img.shields.io/badge/Production%20Ready%3F-No-red.svg) sdab has not been very widely tested yet but it seems to work fine for my purposes
+![Not Production Ready](https://img.shields.io/badge/Production%20Ready%3F-No-red.svg)<br>sdab has not been very widely tested yet but it seems to work fine for about 5 projects that get built by sdab.
 <br>
 *sdab* is a Node.js app to automatically build Dockerfiles that are in Github repos.
 ## Getting Started
@@ -46,12 +46,7 @@ Now that your sdab instance is running, you have to go into your Github Repo's s
 ![Example](https://i.ronthecookie.me/ecvPjtu.png)
 * Select "*Just the `push` event*" and add the Webhook - if you see a nice ✔️ emoji then success!
 
-## "docker run" command argument customization guide (badly written)
-If this is a private git repo - you will need to point it to an ssh key pair with the `-v /path/to/ssh/keypair/folder:/root/.ssh`
-Now, you'll need a port to expose `-p 6000:3000` where 6000 is your port.
-Those are all of the important arguments done, now you just need to run `docker login` (or `docker login registry.example.com` if you are connecting to a registry other than Docker Hub)
-
-### Docker Compose
+### Docker Compose Example
 ```yaml
 version: 3
 services:
@@ -64,3 +59,10 @@ services:
             - '/pathTo/yourHomeDirectory/.docker/config.json:/root/.docker/config.json'
         image: ronthecookie/sdab
 ```
+
+
+## "docker run" command argument customization guide (badly written)
+THIS IS BADDLY WRITTEN, You have been warned.
+If this is a private git repo - you will need to point it to an ssh key pair with the `-v /path/to/ssh/keypair/folder:/root/.ssh`
+Now, you'll need a port to expose `-p 6000:3000` where 6000 is your port.
+Those are all of the important arguments done, now you just need to run `docker login` (or `docker login registry.example.com` if you are connecting to a registry other than Docker Hub)
