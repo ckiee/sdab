@@ -64,7 +64,9 @@ async function handlePush(data) {
             name: data.repository.name,
             author,
             commitMsg,
-            authorID: data.repository.owner.id
+            authorID: data.head_commit.author.id,
+            owner: data.repository.owner.name,
+            ownerID: data.repository.owner.id
         }
     });
 
