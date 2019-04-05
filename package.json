@@ -15,6 +15,6 @@
     "rethinkdbdash": "^2.3.31"
   },
   "scripts": {
-    "start": "node ."
+    "start": "LOG_TIME=abs LOG_LEVEL=info node ."
   }
 }
