@@ -9,7 +9,10 @@
     "express": "^4.16.4",
     "express-github-webhook": "^1.0.6",
     "git-url-parse": "^11.1.2",
-    "mz": "^2.7.0"
+    "log": "^5.0.0",
+    "log-node": "^5.1.0",
+    "mz": "^2.7.0",
+    "rethinkdbdash": "^2.3.31"
   },
   "scripts": {
     "start": "node ."
