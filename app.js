@@ -8,6 +8,7 @@ const fs = require("mz/fs");
 const GitUrlParse = require("git-url-parse");
 const os = require("os");
 const chdproc = require("mz/child_process");
+// const github = require("@octokit/rest");
 // Create repos folder and catch "already exists" error incase it is thrown.
 fs.mkdir("repos")
     .catch(error => {
@@ -20,6 +21,7 @@ app.use(webhookHandler);
 
 webhookHandler.on("push", async (___USELESS___, data) => {
     // console.log(data);
+    // const head_sha = data.after;
     const author = data.head_commit.author.name;
     const cloneURL = data.repository.ssh_url;
     const repoUniqueHuman = data.repository.id+data.repository.full_name.replace("/", "-");
@@ -36,25 +38,25 @@ webhookHandler.on("push", async (___USELESS___, data) => {
         }
         else throw error;
     }
-    if (!(await fs.exists(`repos/${repoUniqueHuman}/Dockerfile`))) return console.log(`Dockerfile missing for ${data.repository.full_name}!`);
-    if (!(await fs.exists(`repos/${repoUniqueHuman}/sdab.json`))) return console.log(`sdab.json missing for ${data.repository.full_name}!`);
+    if (!(await fs.exists(`repos/${repoUniqueHuman}/Dockerfile`))) return console.log(`${Date()}: Dockerfile missing for ${data.repository.full_name}!`);
+    if (!(await fs.exists(`repos/${repoUniqueHuman}/sdab.json`))) return console.log(`${Date()}: sdab.json missing for ${data.repository.full_name}!`);
     delete require.cache[`${repoUniqueHumanAbs}/sdab.json`]; // Clear cache
     const cfg = require(`${repoUniqueHumanAbs}/sdab.json`);
     const tagArg = `${cfg.customRegistry ? `${cfg.customRegistry}/` : ""}${cfg.tag}`;
     if (typeof cfg.tag !== "string") return console.log(`${data.repository.full_name} sdab.json: tag is not a string or is missing`);
     await chdproc.exec(`docker build -t ${tagArg} repos/${repoUniqueHuman}`);
-    console.log(`${data.repository.full_name} event: built docker image ${cfg.tag}`);
+    console.log(`${Date()}: ${data.repository.full_name} event: built docker image ${cfg.tag}`);
     try {
         await chdproc.exec(cfg.customRegistry ? `docker login ${cfg.customRegistry}` : `docker login`);
     } catch (derr) {
         if (derr.message.includes("Cannot perform an interactive login")) {
-            console.log(`${data.repository.full_name} ERROR: You have to login on the host first before starting a build.`);
+            console.log(`${Date()}: ${data.repository.full_name} ERROR: You have to login on the host first before starting a build.`);
             throw derr;
         } else throw derr;
     }
-    console.log(`${data.repository.full_name} event: pushing docker image ${tagArg}`);
+    console.log(`${Date()}: ${data.repository.full_name} event: pushing docker image ${tagArg}`);
     console.log(await chdproc.exec(`docker push ${tagArg}`));
-    console.log(`${data.repository.full_name} event: pushed docker image ${tagArg}`);
+    console.log(`${Date()}: ${data.repository.full_name} event: pushed docker image ${tagArg}`);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
