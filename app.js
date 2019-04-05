@@ -49,6 +49,7 @@ async function handlePush(data) {
     if (process.env.DEBUG_PRINT_REQ === "TRUE") console.log(data);
     const head_sha = data.after;
     const author = data.head_commit.author.name;
+    const commitMsg = data.head_commit.message;
     const cloneURL = data.repository.ssh_url;
     const repoUniqueHuman = data.repository.id + data.repository.full_name.replace("/", "-");
     const repoUniqueHumanAbs = process.cwd() + "/repos/" + data.repository.id + data.repository.full_name.replace("/", "-");
@@ -62,6 +63,7 @@ async function handlePush(data) {
             id: data.repository.id,
             name: data.repository.name,
             author,
+            commitMsg,
             authorID: data.repository.owner.id
         }
     });
