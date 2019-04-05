@@ -37,7 +37,7 @@ webhookHandler.on("push", async (___USELESS___, data) => {
     } catch (error) {
         log.error(error);
         await r.table("builds").update({
-            id: head_sha,
+            id: data.after,
             status: "fail",
             statusReason: error.message,
             updatedAt: Date.now()
