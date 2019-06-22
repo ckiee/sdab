@@ -9,6 +9,7 @@ const GitUrlParse = require("git-url-parse");
 require("log-node")();
 const log = require("log");
 const chdproc = require("mz/child_process");
+const { MessageBuilder } = require("webhook-discord");
 const DiscordWebhook = require("webhook-discord").Webhook;
 const discord = process.env.DISCORD_WEBHOOK_URL
     ? new DiscordWebhook(process.env.DISCORD_WEBHOOK_URL)
@@ -52,7 +53,13 @@ webhookHandler.on("push", async (___USELESS___, data) => {
             updatedAt: Date.now()
         });
         if (discord)
-            Hook.err(`CI Fail: ${data.repository.full_name}`, error.message);
+            discord.send(
+                new MessageBuilder()
+                    .setName("sdab CI")
+                    .setColor("#ff0000")
+                    .setTitle(`Fail: ${data.repository.full_name}`)
+                    .setText(error.message)
+            );
     }
 });
 
@@ -86,9 +93,12 @@ async function handlePush(data) {
         }
     });
     if (discord)
-        discord.info(
-            `CI Start: ${data.repository.full_name}`,
-            `commit "${commitMsg}" by ${author}`
+        discord.send(
+            new MessageBuilder()
+                .setName("sdab CI")
+                .setColor("#fffff")
+                .setTitle(`Fail: ${data.repository.full_name}`)
+                .setText(error.message)
         );
 
     // Cloning the repo
@@ -124,9 +134,10 @@ async function handlePush(data) {
                 data.repository.full_name
             } sdab.json: tag is not a string or is missing`
         );
-    log(
-        await chdproc.exec(`docker build -t ${tagArg} repos/${repoUniqueHuman}`)
+    const buildLog = await chdproc.exec(
+        `docker build -t ${tagArg} repos/${repoUniqueHuman}`
     );
+    log(buildLog);
     log(`${data.repository.full_name} event: building docker image ${cfg.tag}`);
     log(`${data.repository.full_name} event: built docker image ${cfg.tag}`);
     try {
@@ -149,9 +160,12 @@ async function handlePush(data) {
     log(await chdproc.exec(`docker push ${tagArg}`));
     log(`${data.repository.full_name} event: pushed docker image ${tagArg}`);
     if (discord)
-        discord.success(
-            `CI Success: ${data.repository.full_name}`,
-            `commit "${commitMsg}" by ${author}`
+        discord.send(
+            new MessageBuilder()
+                .setName("sdab CI")
+                .setColor("#0000ff")
+                .setTitle(`success: ${data.repository.full_name}`)
+                .setText("```" + buildLog + "```")
         );
     await r.table("builds").update({
         id: head_sha,
