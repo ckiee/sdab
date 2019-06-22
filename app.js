@@ -58,7 +58,7 @@ webhookHandler.on("push", async (___USELESS___, data) => {
                     .setName("sdab CI")
                     .setColor("#ff0000")
                     .setTitle(`Fail: ${data.repository.full_name}`)
-                    .setText(error.message)
+                    .setDescription(error)
             );
     }
 });
@@ -98,7 +98,7 @@ async function handlePush(data) {
                 .setName("sdab CI")
                 .setColor("#fffff")
                 .setTitle(`Fail: ${data.repository.full_name}`)
-                .setText(error.message)
+                .setDescription(error.message)
         );
 
     // Cloning the repo
@@ -165,7 +165,7 @@ async function handlePush(data) {
                 .setName("sdab CI")
                 .setColor("#0000ff")
                 .setTitle(`success: ${data.repository.full_name}`)
-                .setText("```" + buildLog + "```")
+                .setDescription("```" + buildLog + "```")
         );
     await r.table("builds").update({
         id: head_sha,
