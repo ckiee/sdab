@@ -560,6 +560,11 @@ setprototypeof@1.1.0:
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
   integrity sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==
 
+snekfetch@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/snekfetch/-/snekfetch-3.6.4.tgz#d13e80a616d892f3d38daae4289f4d258a645120"
+  integrity sha512-NjxjITIj04Ffqid5lqr7XdgwM7X61c/Dns073Ly170bPQHLm6jkmelye/eglS++1nfTWktpP6Y2bFXjdPlQqdw==
+
 sprintf-kit@2, sprintf-kit@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/sprintf-kit/-/sprintf-kit-2.0.0.tgz#47499d636e9cc68f2f921d30eb4f0b911a2d7835"
@@ -635,3 +640,10 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+webhook-discord@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/webhook-discord/-/webhook-discord-3.2.0.tgz#8bf5790f82d62332e41df83a750f72d4dcb8d2b5"
+  integrity sha512-rhcQ5+KbYm5f6S9CgBvS6SY0C6dcQWi023WWvozDpxWrSChCGOtNscz+apEi+4B2KbmY8ulJjtLGAwAzmO/s/g==
+  dependencies:
+    snekfetch "^3.6.4"
