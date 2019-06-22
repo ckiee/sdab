@@ -98,6 +98,7 @@ async function handlePush(data) {
                 .setName("sdab CI")
                 .setColor("#fffff")
                 .setTitle(`Started: ${data.repository.full_name}`)
+                .setDescription(data.head_commit.url)
         );
 
     // Cloning the repo
