@@ -12,7 +12,8 @@
     "log": "^5.0.0",
     "log-node": "^5.1.0",
     "mz": "^2.7.0",
-    "rethinkdbdash": "^2.3.31"
+    "rethinkdbdash": "^2.3.31",
+    "webhook-discord": "^3.2.0"
   },
   "scripts": {
     "start": "LOG_TIME=abs LOG_LEVEL=info node ."

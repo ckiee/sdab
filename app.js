@@ -9,6 +9,10 @@ const GitUrlParse = require("git-url-parse");
 require("log-node")();
 const log = require("log");
 const chdproc = require("mz/child_process");
+const DiscordWebhook = require("webhook-discord").Webhook;
+const discord = process.env.DISCORD_WEBHOOK_URL
+    ? new DiscordWebhook(process.env.DISCORD_WEBHOOK_URL)
+    : undefined;
 const dbOpts = {
     db: process.env.db || `sdab`
 };
@@ -47,6 +51,8 @@ webhookHandler.on("push", async (___USELESS___, data) => {
             statusReason: error.message,
             updatedAt: Date.now()
         });
+        if (discord)
+            Hook.err(`CI Fail: ${data.repository.full_name}`, error.message);
     }
 });
 
@@ -79,6 +85,11 @@ async function handlePush(data) {
             ownerID: data.repository.owner.id
         }
     });
+    if (discord)
+        discord.info(
+            `CI Start: ${data.repository.full_name}`,
+            `commit "${commitMsg}" by ${author}`
+        );
 
     // Cloning the repo
     const { source } = GitUrlParse(cloneURL); // example value: "github.com"
@@ -107,7 +118,6 @@ async function handlePush(data) {
     const tagArg = `${cfg.customRegistry ? `${cfg.customRegistry}/` : ""}${
         cfg.tag
     }`;
-
     if (typeof cfg.tag !== "string")
         throw new Error(
             `${
@@ -138,6 +148,11 @@ async function handlePush(data) {
     log(`${data.repository.full_name} event: pushing docker image ${tagArg}`);
     log(await chdproc.exec(`docker push ${tagArg}`));
     log(`${data.repository.full_name} event: pushed docker image ${tagArg}`);
+    if (discord)
+        discord.success(
+            `CI Success: ${data.repository.full_name}`,
+            `commit "${commitMsg}" by ${author}`
+        );
     await r.table("builds").update({
         id: head_sha,
         status: "ok",
