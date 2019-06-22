@@ -97,8 +97,7 @@ async function handlePush(data) {
             new MessageBuilder()
                 .setName("sdab CI")
                 .setColor("#fffff")
-                .setTitle(`Fail: ${data.repository.full_name}`)
-                .setDescription(error.message)
+                .setTitle(`Started: ${data.repository.full_name}`)
         );
 
     // Cloning the repo
