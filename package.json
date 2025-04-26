@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Selfhosted Docker Automated Builds",
   "main": "app.js",
-  "author": "RONTheCookie <ronthecookie0101@gmail.com>",
+  "author": "ckie <git-525ff67@ckie.dev>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",

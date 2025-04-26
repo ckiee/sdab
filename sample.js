@@ -6,7 +6,7 @@ sample = { ref: 'refs/heads/master',
   forced: true,
   base_ref: null,
   compare:
-   'https: //github.com/RONTheCookie/ronthecookie.me/compare/16ae94a203db...77527b4f37c4',
+   'https: //github.com/ckiee/ckie.dev/compare/16ae94a203db...77527b4f37c4',
   commits: [],
   head_commit: { id: '77527b4f37c46cc352d173a71053392d4bff0dd8',
      tree_id: '5d8dc2b5e53c312fdf9d6b6073a1c1680a9958a9',
@@ -14,14 +14,14 @@ sample = { ref: 'refs/heads/master',
      message: 'Open in new tab links ul',
      timestamp: '2019-04-05T09: 58: 38+03: 00',
      url:
-      'https: //github.com/RONTheCookie/ronthecookie.me/commit/77527b4f37c46cc352d173a71053392d4bff0dd8',
-     author: { name: 'RONTheCookie',
-        email: 'ronthecookie0101@gmail.com',
-        username: 'RONTheCookie'
+      'https: //github.com/ckiee/ckie.dev/commit/77527b4f37c46cc352d173a71053392d4bff0dd8',
+     author: { name: 'ckie',
+        email: 'example@example.com',
+        username: 'ckie'
     },
-     committer: { name: 'RONTheCookie',
-        email: 'ronthecookie0101@gmail.com',
-        username: 'RONTheCookie'
+     committer: { name: 'ckie',
+        email: 'example@example.com',
+        username: 'ckie'
     },
      added: [],
      removed: [],
@@ -30,116 +30,116 @@ sample = { ref: 'refs/heads/master',
 },
   repository: { id: 122309396,
      node_id: 'MDEwOlJlcG9zaXRvcnkxMjIzMDkzOTY=',
-     name: 'ronthecookie.me',
-     full_name: 'RONTheCookie/ronthecookie.me',
+     name: 'ckie.dev',
+     full_name: 'ckiee/ckie.dev',
      private: false,
-     owner: { name: 'RONTheCookie',
-        email: 'RONTheCookie@users.noreply.github.com',
-        login: 'RONTheCookie',
+     owner: { name: 'ckie',
+        email: 'ckie@users.noreply.github.com',
+        login: 'ckie',
         id:'' ,
         node_id: '',
         avatar_url: 'https: //avatars1.githubusercontent.com/u/25263210?v=4',
         gravatar_id: '',
-        url: 'https: //api.github.com/users/RONTheCookie',
-        html_url: 'https: //github.com/RONTheCookie',
-        followers_url: 'https: //api.github.com/users/RONTheCookie/followers',
+        url: 'https: //api.github.com/users/ckie',
+        html_url: 'https: //github.com/ckiee',
+        followers_url: 'https: //api.github.com/users/ckiee/followers',
         following_url:
-         'https: //api.github.com/users/RONTheCookie/following{/other_user}',
-        gists_url: 'https: //api.github.com/users/RONTheCookie/gists{/gist_id}',
+         'https: //api.github.com/users/ckiee/following{/other_user}',
+        gists_url: 'https: //api.github.com/users/ckiee/gists{/gist_id}',
         starred_url:
-         'https: //api.github.com/users/RONTheCookie/starred{/owner}{/repo}',
-        subscriptions_url: 'https: //api.github.com/users/RONTheCookie/subscriptions',
-        organizations_url: 'https: //api.github.com/users/RONTheCookie/orgs',
-        repos_url: 'https: //api.github.com/users/RONTheCookie/repos',
-        events_url: 'https: //api.github.com/users/RONTheCookie/events{/privacy}',
-        received_events_url: 'https: //api.github.com/users/RONTheCookie/received_events',
+         'https: //api.github.com/users/ckiee/starred{/owner}{/repo}',
+        subscriptions_url: 'https: //api.github.com/users/ckiee/subscriptions',
+        organizations_url: 'https: //api.github.com/users/ckiee/orgs',
+        repos_url: 'https: //api.github.com/users/ckiee/repos',
+        events_url: 'https: //api.github.com/users/ckiee/events{/privacy}',
+        received_events_url: 'https: //api.github.com/users/ckiee/received_events',
         type: 'User',
         site_admin: false
     },
-     html_url: 'https: //github.com/RONTheCookie/ronthecookie.me',
+     html_url: 'https: //github.com/ckiee/ckie.dev',
      description: "My website, that's it.",
      fork: false,
-     url: 'https: //github.com/RONTheCookie/ronthecookie.me',
+     url: 'https: //github.com/ckiee/ckie.dev',
      forks_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/forks',
+      'https: //api.github.com/repos/ckiee/ckie.dev/forks',
      keys_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/keys{/key_id}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/keys{/key_id}',
      collaborators_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/collaborators{/collaborator}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/collaborators{/collaborator}',
      teams_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/teams',
+      'https: //api.github.com/repos/ckiee/ckie.dev/teams',
      hooks_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/hooks',
+      'https: //api.github.com/repos/ckiee/ckie.dev/hooks',
      issue_events_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/issues/events{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/issues/events{/number}',
      events_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/events',
+      'https: //api.github.com/repos/ckiee/ckie.dev/events',
      assignees_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/assignees{/user}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/assignees{/user}',
      branches_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/branches{/branch}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/branches{/branch}',
      tags_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/tags',
+      'https: //api.github.com/repos/ckiee/ckie.dev/tags',
      blobs_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/git/blobs{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/git/blobs{/sha}',
      git_tags_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/git/tags{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/git/tags{/sha}',
      git_refs_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/git/refs{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/git/refs{/sha}',
      trees_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/git/trees{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/git/trees{/sha}',
      statuses_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/statuses/{sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/statuses/{sha}',
      languages_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/languages',
+      'https: //api.github.com/repos/ckiee/ckie.dev/languages',
      stargazers_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/stargazers',
+      'https: //api.github.com/repos/ckiee/ckie.dev/stargazers',
      contributors_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/contributors',
+      'https: //api.github.com/repos/ckiee/ckie.dev/contributors',
      subscribers_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/subscribers',
+      'https: //api.github.com/repos/ckiee/ckie.dev/subscribers',
      subscription_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/subscription',
+      'https: //api.github.com/repos/ckiee/ckie.dev/subscription',
      commits_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/commits{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/commits{/sha}',
      git_commits_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/git/commits{/sha}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/git/commits{/sha}',
      comments_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/comments{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/comments{/number}',
      issue_comment_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/issues/comments{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/issues/comments{/number}',
      contents_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/contents/{+path}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/contents/{+path}',
      compare_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/compare/{base}...{head}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/compare/{base}...{head}',
      merges_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/merges',
+      'https: //api.github.com/repos/ckiee/ckie.dev/merges',
      archive_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/{archive_format}{/ref}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/{archive_format}{/ref}',
      downloads_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/downloads',
+      'https: //api.github.com/repos/ckiee/ckie.dev/downloads',
      issues_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/issues{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/issues{/number}',
      pulls_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/pulls{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/pulls{/number}',
      milestones_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/milestones{/number}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/milestones{/number}',
      notifications_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/notifications{?since,all,participating}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/notifications{?since,all,participating}',
      labels_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/labels{/name}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/labels{/name}',
      releases_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/releases{/id}',
+      'https: //api.github.com/repos/ckiee/ckie.dev/releases{/id}',
      deployments_url:
-      'https: //api.github.com/repos/RONTheCookie/ronthecookie.me/deployments',
+      'https: //api.github.com/repos/ckiee/ckie.dev/deployments',
      created_at: 1519201277,
      updated_at: '2019-04-05T07: 07: 23Z',
      pushed_at: 1554457752,
-     git_url: 'git: //github.com/RONTheCookie/ronthecookie.me.git',
-     ssh_url: 'git@github.com:RONTheCookie/ronthecookie.me.git',
-     clone_url: 'https: //github.com/RONTheCookie/ronthecookie.me.git',
-     svn_url: 'https: //github.com/RONTheCookie/ronthecookie.me',
-     homepage: 'https: //ronthecookie.me',
+     git_url: 'git: //github.com/ckiee/ckie.dev.git',
+     ssh_url: 'git@github.com:ckiee/ckie.dev.git',
+     clone_url: 'https: //github.com/ckiee/ckie.dev.git',
+     svn_url: 'https: //github.com/ckiee/ckie.dev',
+     homepage: 'https: //ckie.dev',
      size: 53,
      stargazers_count: 0,
      watchers_count: 0,
@@ -167,27 +167,27 @@ sample = { ref: 'refs/heads/master',
      stargazers: 0,
      master_branch: 'master'
 },
-  pusher: { name: 'RONTheCookie',
-     email: 'RONTheCookie@users.noreply.github.com'
+  pusher: { name: 'ckie',
+     email: 'ckie@users.noreply.github.com'
 },
-  sender: { login: 'RONTheCookie',
+  sender: { login: 'ckie',
      id: '',
      node_id: '',
      avatar_url: 'https: //avatars1.githubusercontent.com/u/25263210?v=4',
      gravatar_id: '',
-     url: 'https: //api.github.com/users/RONTheCookie',
-     html_url: 'https: //github.com/RONTheCookie',
-     followers_url: 'https: //api.github.com/users/RONTheCookie/followers',
+     url: 'https: //api.github.com/users/ckie',
+     html_url: 'https: //github.com/ckiee',
+     followers_url: 'https: //api.github.com/users/ckiee/followers',
      following_url:
-      'https: //api.github.com/users/RONTheCookie/following{/other_user}',
-     gists_url: 'https: //api.github.com/users/RONTheCookie/gists{/gist_id}',
+      'https: //api.github.com/users/ckiee/following{/other_user}',
+     gists_url: 'https: //api.github.com/users/ckiee/gists{/gist_id}',
      starred_url:
-      'https: //api.github.com/users/RONTheCookie/starred{/owner}{/repo}',
-     subscriptions_url: 'https: //api.github.com/users/RONTheCookie/subscriptions',
-     organizations_url: 'https: //api.github.com/users/RONTheCookie/orgs',
-     repos_url: 'https: //api.github.com/users/RONTheCookie/repos',
-     events_url: 'https: //api.github.com/users/RONTheCookie/events{/privacy}',
-     received_events_url: 'https: //api.github.com/users/RONTheCookie/received_events',
+      'https: //api.github.com/users/ckiee/starred{/owner}{/repo}',
+     subscriptions_url: 'https: //api.github.com/users/ckiee/subscriptions',
+     organizations_url: 'https: //api.github.com/users/ckiee/orgs',
+     repos_url: 'https: //api.github.com/users/ckiee/repos',
+     events_url: 'https: //api.github.com/users/ckiee/events{/privacy}',
+     received_events_url: 'https: //api.github.com/users/ckiee/received_events',
      type: 'User',
      site_admin: false
 }
